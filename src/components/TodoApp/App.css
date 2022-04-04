@@ -1,0 +1,10 @@
+@media (max-width: 479px) {
+  .container {
+    display: flex;
+    position: absolute;
+  }
+}
+
+.container{
+    margin-left: 220px;
+}
