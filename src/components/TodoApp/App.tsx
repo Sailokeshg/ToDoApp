@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Card } from "react-bootstrap";
 import { ReactSortable } from "react-sortablejs";
 import Header from "../Header/Header";
@@ -17,6 +17,7 @@ function App() {
       isDone: false,
     },
   ]);
+
 
   const addTodo = (text: string) => {
     let tempTodos = [];
