@@ -4,13 +4,12 @@ import { ReactSortable } from "react-sortablejs";
 import Header from "../../organisms/Header";
 import FormTodo from "../../molecules/TextField";
 import Todo from "../../molecules/TodoList";
-import "./App.css";
+import "./styles.css";
+import DarkMode from "../../../Theme/Darkmode/DarkMode";
 
 export let archiveList: any[];
 
 function App() {
-  archiveList = [];
-
   const [todos, setTodos] = React.useState<any>([
     {
       text: "Sample task",
@@ -40,8 +39,6 @@ function App() {
 
   const removeTodo = (index: number) => {
     const newTodos = [...todos];
-    archiveList.push(newTodos[index].text);
-    console.log(archiveList);
     newTodos.splice(index, 1);
     setTodos(newTodos);
   };
@@ -51,7 +48,11 @@ function App() {
       <div className="header">
         <Header />
       </div>
+
       <div className="container">
+        <React.Fragment>
+        <DarkMode />
+        </React.Fragment>
         <h1 className="text-center">Todo Application</h1>
 
         <FormTodo addTodo={addTodo} />

@@ -1,23 +1,26 @@
 import React from "react";
 import Header from "../../organisms/Header";
-import { archiveList } from "../Notes/App";
+import "./styles.css";
+import Modal from "../../organisms/Modal";
+import useModal from "../../organisms/Modal/modalhook";
+import MuiModal from "../../organisms/ReactModal/index"
 
-const index = () => {
-  console.log(archiveList);
+const Index = () => {
+  const {isShowing, toggle} = useModal();
+
   return (
     <div>
       <div>
         <Header />
       </div>
-      {/* <div>
-        <ul>
-          {archiveList.map((item) => {
-            return <li>{item}</li>;
-          })}
-        </ul>
-      </div> */}
+
+      <button className="button-default" onClick={toggle}>Show Modal</button>
+      <Modal
+        isShowing={isShowing}
+        hide={toggle}
+      />
     </div>
   );
 };
 
-export default index;
+export default Index;

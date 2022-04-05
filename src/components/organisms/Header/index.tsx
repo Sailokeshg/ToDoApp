@@ -63,16 +63,12 @@ const Index = () => {
               <MenuItem active={true} icon={<FiHome />}>
                 Notes <Link to="/" />
               </MenuItem>
-              <MenuItem
-                icon={<FaList />}
-                active={active}
-                onClick={handleActive}
-              >
-                Archive <Link to="/archive" />
-              </MenuItem>
+              <MenuItem icon={<FaList />}>Archive</MenuItem>
               <MenuItem icon={<FaRegHeart />}>Favourite</MenuItem>
               <MenuItem icon={<RiPencilLine />}>Author</MenuItem>
-              <MenuItem icon={<BiCog />}>Settings</MenuItem>
+              <MenuItem icon={<BiCog />} active={active} onClick={handleActive}>
+                Settings <Link to="/settings" />
+              </MenuItem>
             </Menu>
           </SidebarContent>
         </ProSidebar>
