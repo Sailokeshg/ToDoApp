@@ -1,9 +1,9 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Card } from "react-bootstrap";
 import { ReactSortable } from "react-sortablejs";
-import Header from "../Header/Header";
-import FormTodo from "../TodoForm/FormTodo";
-import Todo from "../TodoList/Todo";
+import Header from "../../organisms/Header";
+import FormTodo from "../../molecules/TextField";
+import Todo from "../../molecules/TodoList";
 import "./App.css";
 
 export let archiveList: any[];
@@ -17,7 +17,6 @@ function App() {
       isDone: false,
     },
   ]);
-
 
   const addTodo = (text: string) => {
     let tempTodos = [];
@@ -56,7 +55,7 @@ function App() {
         <h1 className="text-center">Todo Application</h1>
 
         <FormTodo addTodo={addTodo} />
-        <div>
+        <React.Fragment>
           <ReactSortable list={todos} setList={setTodos} animation={200} sort>
             {todos.map((todo: any, index: number) => (
               <Card>
@@ -72,7 +71,7 @@ function App() {
               </Card>
             ))}
           </ReactSortable>
-        </div>
+        </React.Fragment>
       </div>
     </div>
   );

@@ -1,7 +1,6 @@
 import React from "react";
-import Header from "../../Header/Header";
-import { archiveList } from "../../TodoApp/App";
-import "./index.css";
+import Header from "../../organisms/Header";
+import { archiveList } from "../Notes/App";
 
 const index = () => {
   console.log(archiveList);

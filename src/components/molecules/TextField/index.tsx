@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 
-function FormTodo({ addTodo }: any) {
-  const [value, setValue] = React.useState("");
+function Index({ addTodo }: any) {
+  const [value, setValue] = useState("");
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -11,12 +11,11 @@ function FormTodo({ addTodo }: any) {
     setValue("");
   };
 
-  const inputRef:any = useRef();
+  const inputRef: any = useRef();
 
-   useEffect(() => {
+  useEffect(() => {
     inputRef.current.focus();
-})
-  
+  });
 
   return (
     <Form onSubmit={handleSubmit}>
@@ -40,4 +39,4 @@ function FormTodo({ addTodo }: any) {
   );
 }
 
-export default FormTodo;
+export default Index;

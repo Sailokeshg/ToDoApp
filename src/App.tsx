@@ -2,8 +2,8 @@ import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import TodoApp from "./components/TodoApp/App";
-import ArchivePage from "./components/pages/Archive/index";
+import TodoApp from "./components/pages/Notes/App";
+import ArchivePage from "./components/pages/Settings/index";
 
 
 function App() {

@@ -8,14 +8,14 @@ import {
 } from "react-pro-sidebar";
 import { FaList, FaRegHeart } from "react-icons/fa";
 import { FiHome, FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
-import companyLogo from "../../assets/logo.png";
+import companyLogo from "../../../assets/logo.png";
 import { RiPencilLine } from "react-icons/ri";
 import { BiCog } from "react-icons/bi";
 import "react-pro-sidebar/dist/css/styles.css";
-import "./styles.css";
+import "./index.css";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Index = () => {
   const [menuCollapse, setMenuCollapse] = useState(false);
   const [active, setActive] = useState(false);
 
@@ -81,4 +81,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Index;

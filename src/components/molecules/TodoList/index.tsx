@@ -1,7 +1,8 @@
 import React from "react";
 import { Button } from "react-bootstrap";
+import "./index.css";
 
-function Todo({ todo, index, markTodo, removeTodo }: any) {
+function index({ todo, index, markTodo, removeTodo }: any) {
   return (
     <div className="todo">
       <span style={{ textDecoration: todo.isDone ? "line-through" : "" }}>
@@ -19,4 +20,4 @@ function Todo({ todo, index, markTodo, removeTodo }: any) {
   );
 }
 
-export default Todo;
+export default index;
