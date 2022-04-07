@@ -2,8 +2,9 @@ import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import TodoApp from "./components/pages/Notes";
-import SettingsPage from "./components/pages/Settings/index";
+import TodoApp from "./components/pages/MainPage";
+import ArchivesPage from "./components/pages/archives";
+
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<TodoApp/>}></Route>
-          <Route path="/settings" element={<SettingsPage/>}></Route>
+          <Route path="/archive" element={<ArchivesPage/>}></Route>
         </Routes>
       </BrowserRouter>
     

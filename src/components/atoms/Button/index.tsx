@@ -1,10 +1,26 @@
+import { CustomButtonProps } from "./props";
+import { Button as MuiButton } from "@mui/material";
 import React from "react";
-import { Button } from "react-bootstrap";
 
-export const SucessButton = (Props: any) => {
-  return <Button variant="outline-success">✓</Button>;
-};
 
-export const DangerButton = (dangerProps: any) => {
-  return <Button variant="outline-danger">✕</Button>;
-};
+const Button: React.FC<CustomButtonProps> = ({
+  startIcon,
+  endIcon,
+  children,
+  variant,
+  className,
+  onClick,
+}) => (
+  <MuiButton
+    startIcon={startIcon}
+    endIcon={endIcon}
+    data-testid="button"
+    onClick={onClick}
+    variant={variant}
+    className={className}
+  >
+    {children}
+  </MuiButton>
+);
+
+export default Button;

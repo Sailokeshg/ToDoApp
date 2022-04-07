@@ -5,7 +5,7 @@
 }
 
 [data-theme="dark"] {
-  --font-color: #eee;
+  --font-color: rgb(158, 147, 147);
   --background-color: #333;
   --link-color: lightblue;
 }

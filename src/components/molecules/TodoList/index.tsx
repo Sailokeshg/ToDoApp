@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import MuiButton from "../../atoms/Button/index";
 import "./index.css";
 
 function index({ todo, index, markTodo, removeTodo }: any) {
@@ -9,12 +9,12 @@ function index({ todo, index, markTodo, removeTodo }: any) {
         {todo.text}
       </span>
       <div>
-        <Button variant="outline-success" onClick={() => markTodo(index)}>
+        <MuiButton variant="contained" onClick={() => markTodo(index)}>
           ✓
-        </Button>{" "}
-        <Button variant="outline-danger" onClick={() => removeTodo(index)}>
+        </MuiButton>{" "}
+        <MuiButton variant="contained" onClick={() => removeTodo(index)}>
           ✕
-        </Button>
+        </MuiButton>
       </div>
     </div>
   );
