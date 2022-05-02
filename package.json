@@ -75,6 +75,9 @@
     "@storybook/preset-create-react-app": "^4.1.0",
     "@storybook/react": "^6.4.20",
     "@storybook/testing-library": "0.0.9",
-    "webpack": "^5.71.0"
+    "webpack": "^5.71.0",
+    "@okta/okta-auth-js": "^6.2.0",
+    "@okta/okta-react": "^6.4.3",
+    "@okta/okta-signin-widget": "5.16.1"
   }
 }
