@@ -16,7 +16,7 @@ const Home = () => {
 
   return (
     <div id="home">
-      <Link to="/">Home</Link> | &nbsp;
+      <Link to="/home">Home</Link> | &nbsp;
       <Link id="protected" to="/protected">Protected</Link> | &nbsp;
       {
         authState.isAuthenticated
