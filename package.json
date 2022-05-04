@@ -78,6 +78,6 @@
     "webpack": "^5.71.0",
     "@okta/okta-auth-js": "^6.2.0",
     "@okta/okta-react": "^6.4.3",
-    "@okta/okta-signin-widget": "5.16.1"
+    "@okta/okta-signin-widget": "6.2.1"
   }
 }
