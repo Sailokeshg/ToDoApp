@@ -31,11 +31,11 @@ export default {
       rememberMe: true,
       autoFocus: true,
     },
-    
+
     helpLinks: {
       custom: [
         {
-          text: "Who are we?",
+          text: "About us",
           href: "https://www.zemosolabs.com/",
           target: "_blank",
         },

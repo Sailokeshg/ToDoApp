@@ -1,0 +1,21 @@
+#okta-sign-in.auth-container.main-container {
+  background-color: rgb(243, 235, 235);
+}
+
+#okta-sign-in {
+  border-radius: 16px;
+  box-shadow: 0 3000px 10px rgba(196, 186, 186, 0.2);
+}
+
+.auth-org-logo {
+  width: 26%;
+  height: 80%;
+}
+
+
+div {
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages6.alphacoders.com%2F994%2Fthumb-1920-994203.jpg&f=1&nofb=1);
+}
+html {
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages6.alphacoders.com%2F994%2Fthumb-1920-994203.jpg&f=1&nofb=1);
+}
