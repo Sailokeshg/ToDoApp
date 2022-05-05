@@ -4,7 +4,7 @@ export default {
     issuer: "https://dev-65796340.okta.com",
     clientId: "0oa4vwulamD8YMVbs5d7",
     scopes: ["openid", "profile", "email"],
-    redirectUri: `http://localhost:3000/login/callback`,
+    redirectUri: `http://localhost:3000/home`,
     pkce: true,
     disableHttpsCheck: true,
   },

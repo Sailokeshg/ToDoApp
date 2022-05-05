@@ -11,6 +11,7 @@ import ArchivesPage from "./components/pages/archives";
 import { useNavigate } from "react-router-dom";
 import { OktaAuth, toRelativeUrl } from "@okta/okta-auth-js";
 import { Security, LoginCallback } from "@okta/okta-react";
+import SignIn from "./okta/SignIn";
 
 const oktaAuth = new OktaAuth(config.oidc);
 
@@ -36,9 +37,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/protected" element={<Protected />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<SignIn />} />
         <Route path="/login/callback" element={LoginCallback} />
-
         <Route path="/home" element={<TodoApp />}></Route>
         <Route path="/archive" element={<ArchivesPage />}></Route>
       </Routes>
