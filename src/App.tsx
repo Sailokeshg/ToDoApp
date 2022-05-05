@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./okta/Home";
 import Protected from "./okta/Protected";
 import Login from "./okta/Login";
-import {  Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import TodoApp from "./components/pages/MainPage";
 import ArchivesPage from "./components/pages/archives";
 import { useNavigate } from "react-router-dom";
@@ -39,7 +39,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/login/callback" element={LoginCallback} />
 
-        <Route path="/home" element={<TodoApp/>}></Route>
+        <Route path="/home" element={<TodoApp />}></Route>
         <Route path="/archive" element={<ArchivesPage />}></Route>
       </Routes>
     </Security>
