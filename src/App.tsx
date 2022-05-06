@@ -23,9 +23,7 @@ function App() {
   };
 
   const restoreOriginalUri = async (_oktaAuth: any, originalUri: any) => {
-    navigate(toRelativeUrl(originalUri || "", window.location.origin), {
-      replace: true,
-    });
+    navigate(toRelativeUrl(originalUri || "", window.location.origin));
   };
 
   return (
@@ -38,7 +36,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/protected" element={<Protected />} />
         <Route path="/login" element={<SignIn />} />
-        <Route path="/login/callback" element={LoginCallback} />
+        <Route path="/login/callback" element={<LoginCallback/>} />
         <Route path="/home" element={<TodoApp />}></Route>
         <Route path="/archive" element={<ArchivesPage />}></Route>
       </Routes>

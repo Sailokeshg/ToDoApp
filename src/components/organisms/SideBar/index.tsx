@@ -19,6 +19,9 @@ import ArchiveIcon from "@mui/icons-material/Archive";
 import TextSnippetIcon from "@mui/icons-material/TextSnippet";
 import ListItemButton from "@mui/material/ListItemButton";
 import { Link } from "@mui/material";
+import Button from "../../atoms/Button";
+import { useNavigate } from "react-router-dom";
+import { useOktaAuth } from "@okta/okta-react";
 
 const drawerWidth = 240;
 
@@ -77,11 +80,14 @@ const menuData = [
 
 export default function PersistentDrawerLeft() {
   const theme = useTheme();
+  const { authState, oktaAuth } :any = useOktaAuth();
   const [open, setOpen] = React.useState(false);
-
+  const history = useNavigate();
   const handleDrawerOpen = () => {
     setOpen(true);
   };
+
+  
 
   const handleDrawerClose = () => {
     setOpen(false);
@@ -91,7 +97,8 @@ export default function PersistentDrawerLeft() {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
-        <Toolbar>
+       
+        <Toolbar sx={{justifyContent:"space-between"}}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -102,9 +109,19 @@ export default function PersistentDrawerLeft() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            ToDo Application{" "}
+            ToDo Application
           </Typography>
+          <Button
+    variant="contained"
+      onClick={async() => {
+        console.log("logout");
+        oktaAuth.tokenManager.clear();
+      }}
+    >
+      Logout
+    </Button>
         </Toolbar>
+       
       </AppBar>
       <Drawer
         sx={{

@@ -55,12 +55,16 @@ const SignInForm = () => {
           <input
             type="email"
             onChange={handleUsernameChange}
-            placeholder="Email"
+            placeholder="Email or Username"
+            value={username}
+            required
           />
           <input
             type="password"
             onChange={handlePasswordChange}
             placeholder="Password"
+            value={password}
+            required
           />
           <a href="#">Forgot your password?</a>
           <button>Log In</button>

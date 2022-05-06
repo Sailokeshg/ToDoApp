@@ -1,15 +1,15 @@
 /* eslint-disable import/no-anonymous-default-export */
 export default {
   oidc: {
-    issuer: "https://dev-65796340.okta.com",
+    issuer: "https://dev-65796340.okta.com/oauth2/default",
     clientId: "0oa4vwulamD8YMVbs5d7",
     scopes: ["openid", "profile", "email"],
-    redirectUri: `http://localhost:3000/home`,
+    redirectUri: `http://localhost:3000/login/callback`,
     pkce: true,
     disableHttpsCheck: true,
   },
   widget: {
-    issuer: "https://dev-65796340.okta.com",
+    issuer: "https://dev-65796340.okta.com/oauth2/default",
     clientId: "0oa4vwulamD8YMVbs5d7",
     redirectUri: `http://localhost:3000/login/callback`,
     scopes: ["openid", "profile", "email"],

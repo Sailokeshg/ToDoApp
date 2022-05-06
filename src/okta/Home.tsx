@@ -29,8 +29,8 @@ const Home = () => {
   );
 
   return (
-    <div>
-      <Link to="/">Home</Link>
+    <div style={{justifyContent:"space-between"}}>
+      <Link to="/home">Home</Link>
       <br />
       <Link to="/protected">Protected</Link>
       <br />
