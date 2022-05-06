@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useOktaAuth } from "@okta/okta-react";
+import { Grid } from "@mui/material";
 
 const Home = () => {
   const { authState, oktaAuth } = useOktaAuth();
@@ -29,13 +30,17 @@ const Home = () => {
   );
 
   return (
-    <div style={{justifyContent:"space-between"}}>
+    <Grid container   rowSpacing={3} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+      <Grid item xs={6}>
       <Link to="/home">Home</Link>
-      <br />
+      </Grid>
+      <Grid item xs={6}>
       <Link to="/protected">Protected</Link>
-      <br />
+      </Grid>
+      <Grid container item xs={12}>
       {button}
-    </div>
+      </Grid>
+    </Grid>
   );
 };
 export default Home;

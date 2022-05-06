@@ -80,14 +80,11 @@ const menuData = [
 
 export default function PersistentDrawerLeft() {
   const theme = useTheme();
-  const { authState, oktaAuth } :any = useOktaAuth();
+  const { authState, oktaAuth }: any = useOktaAuth();
   const [open, setOpen] = React.useState(false);
-  const history = useNavigate();
   const handleDrawerOpen = () => {
     setOpen(true);
   };
-
-  
 
   const handleDrawerClose = () => {
     setOpen(false);
@@ -97,8 +94,7 @@ export default function PersistentDrawerLeft() {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
-       
-        <Toolbar sx={{justifyContent:"space-between"}}>
+        <Toolbar >
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -111,17 +107,7 @@ export default function PersistentDrawerLeft() {
           <Typography variant="h6" noWrap component="div">
             ToDo Application
           </Typography>
-          <Button
-    variant="contained"
-      onClick={async() => {
-        console.log("logout");
-        oktaAuth.tokenManager.clear();
-      }}
-    >
-      Logout
-    </Button>
         </Toolbar>
-       
       </AppBar>
       <Drawer
         sx={{

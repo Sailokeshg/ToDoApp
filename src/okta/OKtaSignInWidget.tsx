@@ -2,7 +2,7 @@ import React, { useEffect, useRef, RefObject } from "react";
 // @ts-ignore
 import OktaSignIn from "@okta/okta-signin-widget";
 import "@okta/okta-signin-widget/dist/css/okta-sign-in.min.css";
-import "./styles.css";
+import "./widgetStyles.css";
 import config from "./config";
 
 const OktaSignInWidget = ({ onSuccess, onError }: any) => {

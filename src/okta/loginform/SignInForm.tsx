@@ -9,7 +9,6 @@ const SignInForm = () => {
   const [sessionToken, setSessionToken] = useState();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
   const handleSubmit = (e: any) => {
     console.log("submit");
     e.preventDefault();
