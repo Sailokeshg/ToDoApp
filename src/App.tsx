@@ -15,6 +15,7 @@ import PrivateRoute from "./okta/PrivateRoute";
 
 const oktaAuth = new OktaAuth(config.oidc);
 
+
 function App() {
   const navigate = useNavigate();
 
@@ -25,7 +26,8 @@ function App() {
   const restoreOriginalUri = async (_oktaAuth: any, originalUri: any) => {
     navigate(toRelativeUrl(originalUri || "", window.location.origin));
   };
-
+  
+ 
   return (
     <Security
       oktaAuth={oktaAuth}
@@ -44,14 +46,7 @@ function App() {
         />
         <Route path="/login" element={<SignIn />} />
         <Route path="/login/callback" element={<LoginCallback />} />
-        <Route
-          path="/home"
-          element={
-            <PrivateRoute>
-              <TodoApp />
-            </PrivateRoute>
-          }
-        ></Route>
+        <Route path="/home" element={<TodoApp />}></Route>
         <Route path="/archive" element={<ArchivesPage />}></Route>
       </Routes>
     </Security>

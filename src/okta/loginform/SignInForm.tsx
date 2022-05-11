@@ -12,7 +12,6 @@ const SignInForm = () => {
   const handleSubmit = (e: any) => {
     console.log("submit");
     e.preventDefault();
-
     oktaAuth
       .signInWithCredentials({ username, password })
       .then((res) => {
@@ -43,11 +42,15 @@ const SignInForm = () => {
         <form action="#" onSubmit={handleSubmit}>
           <h1>Login</h1>
           <div className="social-container">
-            <div onClick={() => alert("Feature not enabled")}>
-              <FaFacebook />
+            <div>
+              <a href="https://dev-65796340.okta.com/oauth2/v1/authorize?idp=0oa4zddpnd7m7Y7cI5d7&client_id=0oa4vwulamD8YMVbs5d7&response_type=id_token&response_mode=fragment&scope=openid%20email&redirect_uri=http://localhost:3000/login/callback&state=WM6D&nonce=YsG76jo">
+                <FaFacebook />
+              </a>
             </div>
-            <div onClick={() => alert("Feature not enabled")}>
-              <FaGoogle />
+            <div>
+              <a href="https://dev-65796340.okta.com/oauth2/v1/authorize?idp=0oa4zcab8u9wsKzQT5d7&client_id=0oa4vwulamD8YMVbs5d7&response_type=id_token&response_mode=fragment&scope=openid%20email&redirect_uri=http://localhost:3000/login/callback&state=WM6D&nonce=YsG76jo">
+                <FaGoogle />
+              </a>
             </div>
           </div>
           <span>or use your account</span>
