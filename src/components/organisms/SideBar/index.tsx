@@ -19,9 +19,6 @@ import ArchiveIcon from "@mui/icons-material/Archive";
 import TextSnippetIcon from "@mui/icons-material/TextSnippet";
 import ListItemButton from "@mui/material/ListItemButton";
 import { Link } from "@mui/material";
-import Button from "../../atoms/Button";
-import { useNavigate } from "react-router-dom";
-import { useOktaAuth } from "@okta/okta-react";
 
 const drawerWidth = 240;
 
@@ -80,7 +77,6 @@ const menuData = [
 
 export default function PersistentDrawerLeft() {
   const theme = useTheme();
-  const { authState, oktaAuth }: any = useOktaAuth();
   const [open, setOpen] = React.useState(false);
   const handleDrawerOpen = () => {
     setOpen(true);

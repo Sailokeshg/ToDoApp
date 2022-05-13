@@ -7,9 +7,6 @@ export default {
     redirectUri: `http://localhost:3000/login/callback`,
     pkce: true,
     disableHttpsCheck: true,
-    registration: true,
-    idps: 
-      {type: 'Google', id: '0oa4zcab8u9wsKzQT5d7'}
   },
   widget: {
     issuer: "https://dev-65796340.okta.com/oauth2/default",
